@@ -1,20 +1,9 @@
-# Read the input
-s = int(input())
+def count_bills(s):
+    denominations = [500, 100, 10, 5, 2, 1]
+    bills = [0] * 6
 
-# Calculate the number of bills for each denomination
-bills_500 = s // 500
-s %= 500
+    for i in range(len(denominations)):
+        bills[i] = s // denominations[i]
+        s %= denominations[i]
 
-bills_100 = s // 100
-s %= 100
-
-bills_10 = s // 10
-s %= 10
-
-bills_5 = s // 5
-s %= 5
-
-bills_1 = s
-
-# Print the number of bills for each denomination in one line
-print(f"{bills_500} (500), {bills_100} (100), {bills_10} (10), {bills_5} (5), {bills_1} (1)")
+    return bills

@@ -1,12 +1,7 @@
-# Read the input
-a = int(input())
-b = int(input())
+numberA=int(input("enter a number:"))
+numberB=int(input("enter a number"))
+if numberB > numberA:    
+    print(numberB-int(1))
+elif numberA > numberB:
+    print(numberA-int(1))
 
-# Calculate the maximum value
-max_value = (a + b + abs(a - b)) // 2
-
-# Alternative solution
-max_value = a * (a > b) + b * (b >= a)
-
-# Print the maximum value
-print(max_value)
